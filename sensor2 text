@@ -1,3 +1,5 @@
+**Does not include robot-config.cpp or .h files**
+
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
 /*    Module:       main.cpp                                                  */
