@@ -1,4 +1,4 @@
-**Does not include robot-config.cpp or .h files**
+**Does not include robot-config.cpp or .h files**  
 
 /*----------------------------------------------------------------------------*/
 /*                                                                            */
@@ -25,13 +25,15 @@ int main() {
   EncoderC.setPosition(0, degrees);
   //repeat forever
   while(1){
-    void Encoder();
-    void RangeFinder();
-    Encoder = EncoderC.position
+    double Encoder;
+    double RangeFinder;
+    //collect values from sensors
+    Encoder = EncoderC.position(deg);
+    RangeFinder = RangeFinderA.distance(inches);
     //print value of encoder position
-    Brain.Screen.print("Encoder:", EncoderC.position(deg));
+    Brain.Screen.print("Encoder:", Encoder);
     //print value of rangefinder distance
-    Brain.Screen.print("RangeFinder:",RangeFinderA.distance(inches) );
+    Brain.Screen.print("RangeFinder:",RangeFinder );
     //1 second delay before next loop
     wait(1, seconds);
   }
@@ -39,4 +41,4 @@ int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
   
-}
+};
